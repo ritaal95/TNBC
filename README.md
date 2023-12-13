@@ -23,6 +23,19 @@ To run the scripts it is required R (programming language) with the following pa
 - RColorBrewer
 - TCGAbiolinks
 - SummarizedExperiment
+- biomaRt
+- ensembldb
+- EnsDb.Hsapiens.v86
+- gplots
+- NLP
+- openxlsx
+- BiocManager
+- futile.logger
+- ggplot2
+- tibble
+- dplyr
+- Matrix
+- 
 
 
 # Performed Analysis for the paper
