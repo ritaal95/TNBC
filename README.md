@@ -15,10 +15,15 @@ The study aimed to...
 
 # Requirements
 
-To run the scripts it is required R (programming language with the following packages installed:
+To run the scripts it is required R (programming language) with the following packages installed:
 
--
--
+- readxl
+- tidyverse
+- corrplot
+- RColorBrewer
+- TCGAbiolinks
+- SummarizedExperiment
+
 
 # Performed Analysis for the paper
 
