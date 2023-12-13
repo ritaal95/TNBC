@@ -1,5 +1,5 @@
 # Sialyl-Tn in triple negative breast cancer: gaining insights into a novel subgroup.
-**Autors:** Rita Adubeiro Lourenço, Carla Lopes, Pedro Granjo, Lis Coelho, Ana Sofia Rodrigues, Daniela Barreira, Zélia Silva, Manuela Martins, Ana Rita Grosso, Paula A Videira*
+**Autors:** Rita Adubeiro Lourenço*, Daniela Barreira, Carla Lopes, Pedro Granjo, Lis Coelho, Ana Sofia Rodrigues, Zélia Silva, Manuela Martins, Ana Rita Grosso, Paula A Videira*
 
 *(Corresponding Authors)
 
