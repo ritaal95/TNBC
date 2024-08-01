@@ -297,11 +297,11 @@ ggsurv<-ggsurvplot(surv_fit_groups,
 ggsurv$plot <- ggsurv$plot+ 
   ggplot2::annotate("text", 
                     x = 5, y = 0.5, # x and y coordinates of the text
-                    label = "≈ 3y", size = 5)
+                    label = "≈ 4y", size = 5)
 ggsurv$plot <- ggsurv$plot+ 
   ggplot2::annotate ("text",
                      x = 2, y = 0.01, 
-                     label = "p > 0.0001", cex=5, col="black", fontface=3)
+                     label = "p < 0.0001", cex=5, col="black", fontface=3)
 ggsurv
 dev.off()
 
