@@ -61,7 +61,7 @@ rownames(p.mat) <- rownames(CohortCor)
 M <- t(M)
 p.mat <- t(p.mat)
 
-png("Heatmap STn.png", res=600, width=8000, height=3000)
+png("Heatmap STn.png", res=600, width=10100, height=3500)
 corrplot(M, 
          method="color", 
          type="full", 
@@ -71,24 +71,25 @@ corrplot(M,
          p.mat = p.mat, 
          insig = "label_sig",
          sig.level = c(0.001, 0.01, 0.05),
-         pch.cex = 1.75,
+         pch.cex = 2,
          diag=TRUE, 
          tl.col="black", 
-         tl.cex =1.75,
-         col=colorRampPalette(c("#2166AC","white","#D6604D"))(20),
-         addgrid.col="black"
+         tl.cex =2,
+         col=colorRampPalette(c("#2166AC","white","#D6604D"))(10),
+         addgrid.col="black",
+         mar = c(0, 2.8, 0, 3)
 )
 colorlegend(
-  colorRampPalette(c("#2166AC","white","#D6604D"))(20),
-  c(seq(-1,1,0.25)),
+  colorRampPalette(c("#2166AC","white","#D6604D"))(10),
+  c(seq(-1,1,0.20)),
   xlim=c(0.5,13.5),
   ylim=c(-0.2,0.4),
   align="l",
   vertical=FALSE,
   addlabels=TRUE,
-  cex=1.75
+  cex=2
 )
-text(1.8, -0.5, "Spearman Correlation", col = "black", cex = 1.5)
+text(2, -0.5, "Spearman Correlation", col = "black", cex = 2)
 
 dev.off()
 
