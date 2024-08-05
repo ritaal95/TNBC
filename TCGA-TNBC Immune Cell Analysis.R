@@ -83,8 +83,11 @@ rownames(M) <- rownames(Cor)
 p.mat <- as.matrix(Cor$adj.pValues)
 colnames(p.mat) <- "ST6GALNAC1"
 rownames(p.mat) <- rownames(Cor)
+#horizontal heatmap
+M <- t(M)
+p.mat <- t(p.mat)
 
-png("HeatmapSI.png",res=300, width=2000, height=2700)
+png("HeatmapSI.png", res=600, width=10100, height=3500)
 corrplot(M, 
          method="color", 
          type="full", 
@@ -94,24 +97,25 @@ corrplot(M,
          p.mat = p.mat, 
          insig = "label_sig",
          sig.level = c(0.001, 0.01, 0.05),
-         pch.cex = 1.5,
+         pch.cex = 2,
          diag=TRUE, 
          tl.col="black", 
-         tl.cex =1.75,
-         col=colorRampPalette(c("#2166AC","white","#D6604D"))(20),
+         tl.cex =2,
+         col=colorRampPalette(c("#2166AC","white","#D6604D"))(10),
          addgrid.col="black",
+         mar = c(0, 5, 0, 14)
 )
 colorlegend(
-  colorRampPalette(c("#2166AC","white","#D6604D"))(20),
-  c(seq(-1,1,0.25)),
-  xlim=c(1.65,2.25),
-  ylim=c(0.5,10.5),
+  colorRampPalette(c("#2166AC","white","#D6604D"))(10),
+  c(seq(-1,1,0.2)),
+  xlim=c(0.5,10.5),
+  ylim=c(-0.2,0.4),
   align="l",
-  vertical=TRUE,
+  vertical=FALSE,
   addlabels=TRUE,
-  cex=1
+  cex=2
 )
-text(2.85, 2.25, "Spearman Correlation", col = "black", cex = 1.5, srt=90)
+text(2.2, -0.5, "Spearman Correlation", col = "black", cex = 2)
 dev.off()
 
 GeneExpLevels <- data$ST6GALNAC1
