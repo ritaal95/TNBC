@@ -1,9 +1,4 @@
-#install.packages("corrplot")
-#install.packages("readxl")
-#install.packages("tidyverse")
 
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
 
 #############################################################################################################
 ######################################### Immune cells frequency: ###########################################
@@ -11,11 +6,18 @@
 ###################################### Correlations with ST6GALNAC1 #########################################
 #############################################################################################################
 
-load("data/logTPMs.RData")
+##Libraries used
+#install.packages("corrplot")
+#install.packages("readxl")
+#install.packages("tidyverse")
 
-library(readxl)
-library(corrplot)
-library(tidyverse)
+##Load libraries
+#library(readxl)
+#library(corrplot)
+#library(tidyverse)
+
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
+load("data/logTPMs.RData")
 
 ####Separating samples with the median to define high and low####
 Exp_level<-function(Gene){
