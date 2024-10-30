@@ -38,7 +38,7 @@ GO_30$GO_biological_process <- gsub("protein kinase A signaling", "PKA signaling
  
 # Draw the plot with ggplot2
 #--------------------------------------
-png("data/GO_BP_30.png", res=800, width=10000, height=6300)
+png("data/GO_BP_30.png", res=800, width=10000, height=7000)
 #windows()
 ggplot(GO_30, aes(x = GO_biological_process, y = NES)) +
   #geom_hline(yintercept = 1, linetype="dashed", 
