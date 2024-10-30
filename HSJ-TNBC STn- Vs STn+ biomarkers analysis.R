@@ -6,7 +6,7 @@
 #install.packages(openxlsx)
 
 ##Load librarie
-library(openxlsx)
+#library(openxlsx)
 
 ##Select the Directory where you can find the Table S2 with the information regarding the HSJ-TNBC cohort
 TNBC_Data <- as.data.frame(read.xlsx("data/HSJ-TNBC_Data.xlsx"))
