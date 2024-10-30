@@ -1,18 +1,17 @@
-#install.packages("survival")
-#install.packages("survminer")
-
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
-
 #############################################################################################################
 ########################### Complete Overall Survival Analysis of TNBC TCGA Cohort ##########################
 #############################################################################################################
 
+##Libraries used
+#install.packages("survival")
+#install.packages("survminer")
+
+##Load libraries
+#library(survival)
+#library(survminer)
+
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
 load("data/TNBC_data.RData")
-
-library(survival)
-library(survminer)
-
 
 tnbc.vars <- c(
   "year_of_initial_pathologic_diagnosis",
