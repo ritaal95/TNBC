@@ -31,10 +31,14 @@ GO_30$Gene_number <- as.numeric(GO_30$Gene_number)
 
 # Transform FDR values by -log10('FDR values')
 GO_30$'|log10(FDR)|' <- -(log10(GO_30$FDR))
+GO_30$GO_biological_process <- gsub("cellular response to vascular endothelial growth factor stimulus", "cellular response to VEGF stimulus", GO_30$GO_biological_process )
+GO_30$GO_biological_process <- gsub("phospholipase C-activating G protein-coupled receptor signaling pathway", "PLC-activating GPCR signaling pathway", GO_30$GO_biological_process )
+GO_30$GO_biological_process <- gsub("protein kinase A signaling", "PKA signaling", GO_30$GO_biological_process )
 
-# Draw the plot with ggplot2 (Figure 2)
+ 
+# Draw the plot with ggplot2
 #--------------------------------------
-png("data/GO_BP_30.png", res=800, width=10000, height=6000)
+png("data/GO_BP_30.png", res=800, width=10000, height=6300)
 #windows()
 ggplot(GO_30, aes(x = GO_biological_process, y = NES)) +
   #geom_hline(yintercept = 1, linetype="dashed", 
@@ -46,9 +50,13 @@ ggplot(GO_30, aes(x = GO_biological_process, y = NES)) +
   coord_flip()+
   theme_bw()+
   theme(axis.ticks.length=unit(-0.1, "cm"),
-        axis.text.x = element_text(margin=margin(5,5,0,5,"pt"), color = "black", size = 15),
-        axis.text.y = element_text(margin=margin(5,5,5,5,"pt"), color = "black", size = 15),
+        axis.text.x = element_text(margin=margin(5,5,0,5,"pt"), color = "black", size = 20),
+        axis.text.y = element_text(margin=margin(5,5,5,5,"pt"), color = "black", size = 20),
+        axis.title.x = element_text(size = 18),
+        axis.title.y = element_text(size = 18),
         panel.grid.minor = element_blank(),
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
         legend.title.align=0.5)+
   xlab("GO biological processes")+
   ylab("Normalized Enrichment Score")+
