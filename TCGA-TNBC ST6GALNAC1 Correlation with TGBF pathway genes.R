@@ -1,3 +1,7 @@
+#############################################################################################################
+######################### Correlations between ST6GALNAC1 and the TGF-B pathway genes #######################
+#############################################################################################################
+##Libraries used
 #if (!require("BiocManager", quietly = TRUE))
   #install.packages("BiocManager")
 
@@ -5,19 +9,13 @@
 #install.packages(corrplot)
 #install.packages("openxlsx")
 
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
+#Load libraries
+#library("EnsDb.Hsapiens.v86")
+#library(corrplot)
+#library(openxlsx)
 
-#############################################################################################################
-######################### Correlations between ST6GALNAC1 and the TGF-B pathway genes #######################
-#############################################################################################################
-
-#Load necessary libraries
-library("EnsDb.Hsapiens.v86")
-library(corrplot)
-library(openxlsx)
-
-#Load Data
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
+##Load Data
 load("data/TNBC_data.RData")
 
 #Normality of data
