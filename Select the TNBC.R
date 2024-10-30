@@ -1,22 +1,19 @@
+#############################################################################################################
+########################### Selecting the TNBC cases from the TCGA-BRCA project #############################
+#############################################################################################################
+
+##Libraries used
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 # install.packages("BiocManager")
 #BiocManager::install("biomaRt")
 #install.packages("openslsx")
 
-#Select the Directory where you can find the RData with the information retrieved from the TCGA
-#obtained in the "Dowload TCGA-BRCA.R" code
-
-#############################################################################################################
-########################### Selecting the TNBC cases from the TCGA-BRCA project #############################
-#############################################################################################################
-
-
-#Load libraries
+##Load libraries
 library(biomaRt)
 library(openxlsx)
 
-#Load data 
-
+##Select the Directory where you can find the RData with the information retrieved from the TCGA obtained in the "Download TCGA-BRCA.R" code
+##Load data 
 load("data/clinical.rda")
 load("data/tpm.rda")
 load("data/fpkm.per.tissue.rda")
