@@ -1,16 +1,16 @@
-#install.packages(dplyr)
-
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
-
 #############################################################################################################
 ########### Comparing TGFB pathway gene expression between high and low ST6GALNAC1 expression groups#########
 #############################################################################################################
 
-#Load libraries needed:
-library(dplyr)
+##Libraries used
+#install.packages(dplyr)
 
-#Load the gene expression data
+##Load libraries
+#library(dplyr)
+
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
+
+##Load the gene expression data
 load("data/logTPMs.RData")
 
 ####Separating samples with the median to define high and low####
