@@ -1,15 +1,16 @@
-#install.packages(corrplot)
-#install.packages(openxlsx)
-
-#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort
-#Table S1 from Supplementary File S2
-
 #############################################################################################################################
 ##################################### STn correlation with the other biomarkers analysed ####################################
 #############################################################################################################################
 
-library(openxlsx)
-library(corrplot)
+##Libraries used 
+#install.packages(corrplot)
+#install.packages(openxlsx)
+
+##Load libraries
+#library(openxlsx)
+#library(corrplot)
+
+##Select the Directory where you can find the Table S2 with the information regarding the HSJ-TNBC cohort
 
 TNBC_Data <- as.data.frame(read.xlsx("data/HSJ-TNBC_Data.xlsx"))
 
