@@ -12,7 +12,7 @@ library(survival)
 library(survminer)
 library(readxl)
 
-#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort Table S2
+#Select the Directory where you can find the Table S2 with the information regarding the HSJ-TNBC cohort
 
 ##Preparing the data table for analysis
 TNBC_Data <- as.data.frame(read_xlsx("data/HSJ-TNBC_Data.xlsx"))
