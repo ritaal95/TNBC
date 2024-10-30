@@ -1,19 +1,18 @@
-#install.packages(tidyverse)
-#install.packages(readxl)
-
-#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort
-#Table S1 from Supplementary File S2
-
 #############################################################################################
 ################ Contingency tables to analyse STn with the clinical fetures ################
 ############################### Supplementary Material Nr XX ################################
 #############################################################################################
 
-#Libraries Used
-library(readxl)
-library(tidyverse)
+##Libraries Used
+#install.packages(tidyverse)
+#install.packages(readxl)
 
-#Preparing the data table for analysis
+##Load libraries
+#library(readxl)
+#library(tidyverse)
+
+##Select the Directory where you can find the Table S2 with the information regarding the HSJ-TNBC cohort
+##Preparing the data table for analysis
 TNBC_Data <- as.data.frame(read_xlsx("data/HSJ-TNBC_Data.xlsx"))
 ClinicalInfo <-  dplyr::select(TNBC_Data, c("Laterality","Age","Size",
                                             "Grade","Margin","Invasion",
