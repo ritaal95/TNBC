@@ -1,20 +1,20 @@
-#install.packages(survival)
-#install.packages(survminer)
-#install.packages(readxl)
-
-#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort
-#Table S1 from Supplementary File S2
-
 #############################################################################################################################
 ############################# Survival Analysis of TNBC Patients Samples Based on STn Expression ############################
 #############################################################################################################################
 
-#Libraries used
+##Libraries used
+#install.packages(survival)
+#install.packages(survminer)
+#install.packages(readxl)
+
+##Load libraries
 library(survival)
 library(survminer)
 library(readxl)
 
-#Preparing the data table for analysis
+#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort Table S2
+
+##Preparing the data table for analysis
 TNBC_Data <- as.data.frame(read_xlsx("data/HSJ-TNBC_Data.xlsx"))
 ClinicalInfo <-  dplyr::select(TNBC_Data, c("Dx_Date", "Dist_Met_Dt", "Relapse", 
                                             "Relapse_Dt", "Alive", "Death", "Sialyl-Tn_CM_Tumor" ))
