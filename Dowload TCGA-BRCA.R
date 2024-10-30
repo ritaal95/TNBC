@@ -1,3 +1,9 @@
+#############################################################################################################
+################## Downloading the gene expression and clinical data of the TCGA-BRCA #######################
+#############################################################################################################
+
+
+##Libraries used
 #if (!requireNamespace("BiocManager", quietly = TRUE))
   #install.packages("BiocManager")
 
@@ -5,14 +11,9 @@
 #BiocManager::install("SummarizedExperiment")
 #install.packages("futile.logger")
 
-
-#############################################################################################################
-########## Downloading the gene expression and clinical metadata of the TCGA-BRCA ###########################
-#############################################################################################################
-
-library("TCGAbiolinks")
-library("SummarizedExperiment")
-library(futile.logger)
+#library("TCGAbiolinks")
+#library("SummarizedExperiment")
+#library(futile.logger)
 
 
 project <- 'TCGA-BRCA'
