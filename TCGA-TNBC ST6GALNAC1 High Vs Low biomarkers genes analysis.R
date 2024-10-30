@@ -1,16 +1,15 @@
-#install.packages(tidyverse)
-
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
-
 #############################################################################################################
 ########### Comparing biomarkers gene expression between high and low ST6GALNAC1 expression groups###########
 #############################################################################################################
+##Libraries used
+#install.packages(tidyverse)
 
-#Load libraries needed:
-library(tidyverse)
+##Load libraries
+#library(tidyverse)
 
-#Load the gene expression data
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
+
+##Load the gene expression data
 load("data/logTPMs.RData")
 
 ####Separating samples with the median to define high and low####
