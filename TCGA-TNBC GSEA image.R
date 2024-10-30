@@ -1,14 +1,14 @@
-#install.packages("tidyverse")
-
-#Select the Directory where you can find the excel with the information
-#regarding the GO Biological processes obtained
-
 #############################################################
 ############## Plot gene ontology enrichment ################
 #############################################################
 
-# Packages required
-library(tidyverse)
+##Libraries used
+#install.packages("tidyverse")
+
+#Load librarie
+#library(tidyverse)
+
+##Select the Directory where you can find the excel with the information regarding the GO Biological processes obtained
 
 # Import the table containing all the enriched GO terms
 GO_all <- read.csv("data/GO_BP.csv",header=T,stringsAsFactors = T)
