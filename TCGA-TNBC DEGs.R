@@ -1,17 +1,16 @@
+##############################################################################################
+######### Obtain the DEG from the TCGA-TNBC cohort based on ST6GALNAC1 expression#############
+##############################################################################################
+##libraries used
 #install.packages("limma")
 #install.packages("openxlsx")
 #install.packages("tidyverse")
 #install.packages("ggrepel")
 
-#Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort
-#obtained from the "Select the TNBC.R" code
+#Load librarie
+#library(limma)
 
-##############################################################################################
-######### Obtain the DEG from the TCGA-TNBC cohort based on ST6GALNAC1 expression#############
-##############################################################################################
-
-library(limma)
-
+##Select the Directory where you can find the RData with the information regarding the TCGA-TNBC cohort obtained from the "Select the TNBC.R" code
 load("data/Reads_TNBC.RData")
 
 geneExpLevels <- Reads_TNBC["ST6GALNAC1",]
@@ -30,9 +29,10 @@ refinedReads_TNBC_o <- na.omit(refinedReads_TNBC_o)
 data <- refinedReads_TNBC_o[rowSums(refinedReads_TNBC_o) > 10,]
 
 #Identify the differentially expressed genes between low and high samples
-library(openxlsx)
-library(tidyverse)
-library(ggrepel)
+#Load libraries
+#library(openxlsx)
+#library(tidyverse)
+#library(ggrepel)
 
 #Create design matrix with coefficients to be used in linear models
 sampleType <- as.vector(c(rep("Low", length(Low_ID)), rep("High", length(High_ID))))
