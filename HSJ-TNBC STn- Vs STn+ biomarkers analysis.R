@@ -1,14 +1,14 @@
-#install.packages(openxlsx)
-
-#Select the Directory where you can find the table with the information regarding the HSJ-TNBC cohort
-#Table S1 from Supplementary File S2
-
 #############################################################################################################
 ########################### Comparing biomarkers expression between STn- and STn+  groups####################
 #############################################################################################################
 
+##Librarie used
+#install.packages(openxlsx)
+
+##Load librarie
 library(openxlsx)
 
+##Select the Directory where you can find the Table S2 with the information regarding the HSJ-TNBC cohort
 TNBC_Data <- as.data.frame(read.xlsx("data/HSJ-TNBC_Data.xlsx"))
 Biomarkers <- TNBC_Data[,24:37]
 rownames(Biomarkers) <- TNBC_Data$ID
